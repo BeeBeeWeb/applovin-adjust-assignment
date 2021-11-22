@@ -1,3 +1,14 @@
+# Assessment Completed
+## Locally running app screenshot
+![image](https://user-images.githubusercontent.com/22868164/141699923-f4b29b0b-ea0b-4816-8e01-9da3570466a7.png)
+---
+
+## Testing coverage
+![image](https://user-images.githubusercontent.com/22868164/141699889-5238a07f-474b-4c18-bce6-4a24e204b3cd.png)
+
+---
+
+
 # Webdev Assignment
 Owner: [Inbound Team](https://mate.adjust.com/teams/inbound)
 
