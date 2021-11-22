@@ -3,7 +3,7 @@ import axios from 'axios'
 import flushPromises from 'flush-promises'
 import PageIndex from '../pages/index.vue'
 import ProductCard from '../components/ProductCard.vue'
-import ActiveFIlterInfo from '../components/ActiveFilterInfo.vue'
+import ActiveFilterInfo from '../components/ActiveFilterInfo.vue'
 import SearchBox from '../components/SearchBox.vue'
 import { Products } from './products.mock'
 
@@ -20,7 +20,7 @@ describe('PageIndex', () => {
     wrapper = await shallowMount(PageIndex, {
       stubs: {
         ProductCard,
-        ActiveFIlterInfo,
+        ActiveFilterInfo,
         Categories: true,
         SearchBox
       },
@@ -142,9 +142,9 @@ describe('PageIndex', () => {
     await flushPromises()
     wrapper.vm.onSearch('casu')
     await flushPromises()
-    const text = wrapper.findAll('p')
+    const text = wrapper.find('[data-test="active-filter"]')
     const mockText = "Showing 3 in categories electronics, jewelery, men's clothing, women's clothing, containing \"casu\""
-    expect(text.at(0).text().replace(/\r?\n?/g, '').trim().replace(/\s\s+/g, ' ')).toBe(mockText)
+    expect(text.text().replace(/\r?\n?/g, '').trim().replace(/\s\s+/g, ' ')).toBe(mockText)
     // expect(text.at(0).html()).toBe(mockText)
   })
 })

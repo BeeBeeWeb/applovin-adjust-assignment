@@ -1,5 +1,5 @@
 <template>
-  <p class="mb-4 text-blue-500 text-xs">
+  <p class="mb-4 text-blue-500 text-xs" data-test="active-filter">
     <span>
       Showing
       <strong>{{ totalResults }}</strong> in categories
